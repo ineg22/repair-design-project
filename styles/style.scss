@@ -1,0 +1,213 @@
+$gold: #E3B873;
+$black-bg: #131313;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.global-wrapper {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $black-bg;
+  height: 83px;
+  padding-left: 82px;
+  padding-right: 100px;
+
+  .logo {
+    min-width: 181px;
+    color: $gold;
+    font-size: 6px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  .menu {
+    width: 582px;
+    font-size: 12px;
+
+    .menu__list {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+
+      .menu__item {
+        text-decoration: none;
+        color: white;
+      }
+
+    }
+  }
+
+  .tel {
+    margin-left: 20px;
+    margin-right: 20px;
+    min-width: 127px;
+    color: $gold;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .call-btn {
+    background-color: $gold;
+    border: none;
+    color: white;
+
+    width: 161px;
+    height: 37px;
+  }
+}
+
+.preview {
+  height: 755px;
+  background-color: $black-bg;
+}
+
+.completed-projects {
+  height: 1026px;
+  background-color: blue;
+}
+
+.online-control {
+  height: 779px;
+  background-color: green;
+}
+
+.types-of-repair {
+  height: 871px;
+  background-color: blue;
+}
+
+.steps-before {
+  height: 927px;
+  background-color: green;
+}
+
+.fantasies {
+  height: 864px;
+  background-color: blue;
+}
+
+.design-project {
+  height: 620px;
+  background-color: green;
+}
+
+.steps-after {
+  height: 1175px;
+  background-color: blue;
+}
+
+.team {
+  height: 440px;
+  background-color: green;
+}
+
+.clients {
+  height: 1523px;
+  background-color: blue;
+}
+
+.contacts {
+  height: 954px;
+  background-color: green;
+}
+
+.footer {
+  height: 133px;
+  background-color: $black-bg;
+}
+
+@media only screen and (max-width: 1440px) {
+  .global-wrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .header {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .header .call-btn {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header .menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .global-wrapper {
+    min-width: 375px;
+  }
+
+  .steps-after,
+  .steps-before,
+  .clients,
+  .footer {
+    display: none;
+  }
+
+  .header {
+    height: 57px;
+  }
+
+  .preview {
+    height: 476px;
+    background-color: $black-bg;
+  }
+
+  .completed-projects {
+    height: 727px;
+    background-color: blue;
+  }
+
+  .online-control {
+    height: 820px;
+    background-color: green;
+  }
+
+  .types-of-repair {
+    height: 2030px;
+    background-color: blue;
+  }
+
+  .fantasies {
+    height: 864px;
+    background-color: blue;
+  }
+
+  .design-project {
+    height: 1963px;
+    background-color: green;
+  }
+
+  .team {
+    height: 1708px;
+    background-color: green;
+  }
+
+  .contacts {
+    height: 1012px;
+    background-color: green;
+  }
+}
