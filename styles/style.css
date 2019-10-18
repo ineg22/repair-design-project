@@ -2116,41 +2116,258 @@ li {
   .header {
     padding-right: 0;
   }
+  .online-control .online-control__form-wrap {
+    height: 250px;
+  }
+  .online-control .online-control__form-wrap .oc-form__submit {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  .completed-projects .completed-slider {
+    display: none;
+  }
+  .completed-projects .completed-short {
+    margin: 0 auto;
+  }
+  .clients .clients__body {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .clients .clients__body .clients__card-wrap:nth-child(3) {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
+  .footer .call-rq,
   .header .call-rq {
     display: none;
+  }
+  .team .team__body {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .online-control .online-control__form-wrap {
+    height: 250px;
+  }
+  .online-control .online-control__form-wrap .oc-form__submit {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  .types-of-repair .types-of-repair__body {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .types-of-repair .card-three {
+    display: none;
+  }
+  .design-project .design-project__body {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .design-project .design-project__body .card-three {
+    display: none;
+  }
+  .steps-after .steps-after__right-wrap {
+    display: none;
+  }
+  .steps-before .steps-before__left-wrap {
+    display: none;
+  }
+  .steps-before .steps-before__right-wrap {
+    margin: 0 auto;
   }
 }
 
 @media only screen and (max-width: 1100px) {
+  .footer .menu,
   .header .menu {
     display: none;
   }
+  .footer .call-rq,
   .header .call-rq {
     display: block;
     margin-right: 20px;
   }
+  .footer .tel,
   .header .tel {
     min-width: 130px;
     padding: 0 10px 0 0;
     font-size: 12px;
   }
+  .footer .logo,
   .header .logo {
     font-size: 5px;
   }
-  .team .team__body {
+  .online-control .online-control__body {
+    width: 80%;
+  }
+  .online-control .online-control__form-wrap {
+    margin-top: 20px;
+  }
+  .online-control .online-control__video {
+    width: 340px;
+    height: 207px;
+    margin-top: 15px;
+  }
+  .online-control .online-control__video .online-control__play-btn {
+    display: none;
+  }
+  .fantasies .fantasies__gallery-wrap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fantasies .fantasies__gallery-wrap .fantasies__img-wrap:nth-child(3),
+  .fantasies .fantasies__gallery-wrap .fantasies__img-wrap:nth-child(4) {
+    display: none;
+  }
+  .team .team__card-wrap:nth-child(3) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .contacts .contacts__map-wrap {
+    display: none;
+  }
+  .contacts .contacts__form-wrap {
+    width: 100%;
+  }
+  .fantasies .fantasies__gallery-wrap {
+    display: none;
+  }
+  .fantasies .fantasies__list-wrap {
+    margin: 0 auto;
+  }
+  .design-project .design-project__head {
+    margin: 0 0 0 0;
+    padding-top: 50px;
+    width: 100%;
+  }
+  .design-project .design-project__head p {
     width: 100%;
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .types-of-repair .types-of-repair__body {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .types-of-repair .card-two {
+    display: none;
+  }
+  .design-project .design-project__body {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .design-project .design-project__body .card-two {
+    display: none;
+  }
+  .team .team__card-wrap:nth-child(2) {
+    display: none;
+  }
+  .clients .clients__body .clients__card-wrap:nth-child(2) {
+    display: none;
+  }
+  .preview .short-about .short-about__wrapper {
+    margin-right: 20px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
+  .footer,
   .header {
     padding-left: 20px;
   }
+  .footer .call-rq,
   .header .call-rq {
     display: none;
+  }
+  .contacts .contacts__address-wrap {
+    width: 100%;
+  }
+  .contacts .oc-form .oc-form__check {
+    margin: 0 0 0 170px;
+  }
+  .contacts .oc-form .oc-form__question,
+  .contacts .oc-form .oc-form__phone,
+  .contacts .oc-form .oc-form__name {
+    width: 100%;
+  }
+  .completed-projects .completed-short {
+    -ms-flex-preferred-size: 375px;
+        flex-basis: 375px;
+    padding: 20px;
+  }
+  .team .team__footer {
+    width: 100%;
+  }
+  .preview {
+    background-color: #131313;
+  }
+  .preview .instagram,
+  .preview .scroll-down {
+    display: none;
+  }
+  .online-control .online-control__form-wrap {
+    display: none;
+  }
+  .online-control .online-control__body {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .contacts .oc-form .oc-form__check {
+    margin: 0 0 0 50px;
+  }
+  .team .team__head {
+    width: 100%;
+  }
+  .fantasies {
+    height: 0;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+  }
+  .fantasies .fantasies__list,
+  .fantasies .fantasies__gallery-wrap {
+    display: none;
+  }
+  .fantasies .fantasies__list-head {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    bottom: 152px;
+    padding: 0 45px;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .fantasies .mini-slider {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 19px;
+    bottom: -121px;
+  }
+  .fantasies .mini-slider .mini-slider__slides img {
+    width: 340px;
+  }
+  .steps-before .steps-before__right-wrap {
+    width: 100%;
+  }
+  .steps-before .oc-form .oc-form__submit {
+    left: initial;
+  }
+  .steps-before .steps-before__piggy {
+    width: 100%;
   }
 }
 
@@ -2174,11 +2391,6 @@ li {
   }
   .preview {
     height: 476px;
-    background-color: #131313;
-  }
-  .preview .instagram,
-  .preview .scroll-down {
-    display: none;
   }
   .preview .short-about {
     background: url(../assets/img/preview.jpg) no-repeat center/242%;
@@ -2285,14 +2497,6 @@ li {
     font-size: 22px;
     margin: 0 0 17px 0;
   }
-  .online-control .online-control__video {
-    width: 340px;
-    height: 207px;
-    margin-top: 15px;
-  }
-  .online-control .online-control__video .online-control__play-btn {
-    display: none;
-  }
   .online-control .online-control__body {
     width: 100%;
     height: 200px;
@@ -2307,6 +2511,8 @@ li {
     bottom: 11px;
   }
   .online-control .online-control__form-wrap {
+    display: block;
+    margin-top: 0px;
     width: 100%;
     height: 298px;
   }
@@ -2355,6 +2561,8 @@ li {
     line-height: 25px;
   }
   .online-control .online-control__form-wrap .oc-form__submit {
+    margin-right: 0;
+    margin-left: 0;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -2380,6 +2588,10 @@ li {
   }
   .types-of-repair .types-of-repair__head img {
     margin-top: 2px;
+  }
+  .types-of-repair .types-of-repair__body .card-three,
+  .types-of-repair .types-of-repair__body .card-two {
+    display: block;
   }
   .types-of-repair .types-of-repair__body .card-wrapper {
     height: 484px;
@@ -2419,37 +2631,6 @@ li {
   .types-of-repair .types-of-repair__body img {
     width: 340px;
   }
-  .fantasies {
-    height: 0;
-    position: relative;
-    z-index: 1;
-    background-color: transparent;
-  }
-  .fantasies .fantasies__list,
-  .fantasies .fantasies__gallery-wrap {
-    display: none;
-  }
-  .fantasies .fantasies__list-head {
-    position: absolute;
-    margin: 0;
-    left: 0;
-    bottom: 152px;
-    padding: 0 45px;
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
-  }
-  .fantasies .mini-slider {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    left: 19px;
-    bottom: -121px;
-  }
-  .fantasies .mini-slider .mini-slider__slides img {
-    width: 340px;
-  }
   .design-project {
     height: 1963px;
     background-color: #131313;
@@ -2458,6 +2639,7 @@ li {
     display: none;
   }
   .design-project .design-project__head {
+    padding-top: 153px;
     margin-bottom: 58px;
   }
   .design-project .design-project__head span {
@@ -2472,6 +2654,10 @@ li {
     color: #ffffff;
     font-size: 15px;
     line-height: 20px;
+  }
+  .design-project .design-project__body .card-three,
+  .design-project .design-project__body .card-two {
+    display: block;
   }
   .design-project .design-project__body .card-wrapper {
     height: 484px;
@@ -2549,6 +2735,12 @@ li {
             justify-content: center;
     padding-left: 32px;
   }
+  .team .team__body .team__card-wrap:nth-child(2),
+  .team .team__body .team__card-wrap:nth-child(3) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .team .team__body .card-img-wrap {
     width: 304px;
     overflow: hidden;
@@ -2615,7 +2807,7 @@ li {
     margin: 5px 0 0 4px;
   }
   .contacts .contacts__map-wrap {
-    margin-top: 45px;
+    margin: 45px 0 0 0;
     bottom: 0;
     display: block;
     width: 340px;
