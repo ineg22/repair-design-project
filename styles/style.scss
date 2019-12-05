@@ -40,16 +40,38 @@ li {
   display: none;
 }
 
+.bad-boy-bg {
+  position: absolute;
+  z-index: -10;
+
+  width: 100%;
+  height: 10150px;
+
+  background: linear-gradient(
+    to bottom,
+    $black-bg 1864px,
+    white 1864px 4438px,
+    $black-bg 4438px 5304px,
+    white 5304px 5924px,
+    $black-bg 5924px 7540px,
+    white 7540px 9063px,
+    $black-bg 9063px
+  );
+}
+
 //------------------------------------------------------------------------------------------------------------------//
 .mini-slider {
+  position: relative;
+
   width: 340px;
   height: 242px;
   overflow: hidden;
-  position: relative;
 
   .mini-slider__slides {
-    display: flex;
     position: relative;
+
+    display: flex;
+
     transition: transform 500ms linear;
 
     img {
@@ -60,16 +82,18 @@ li {
   .mini-slider__controls {
     .mini-slider__controls-left {
       position: absolute;
-      right: 13px;
       top: 43%;
+      right: 13px;
+
       width: 36px;
       height: 36px;
-      border-radius: 50%;
+
       background-color: $gold;
+      border-radius: 50%;
 
       img {
-        margin-left: 14px;
         margin-top: 8px;
+        margin-left: 14px;
       }
 
       &:hover {
@@ -81,14 +105,16 @@ li {
       position: absolute;
       top: 43%;
       left: 13px;
+
       width: 36px;
       height: 36px;
-      border-radius: 50%;
+
       background-color: $gold;
+      border-radius: 50%;
 
       img {
-        margin-left: 11px;
         margin-top: 8px;
+        margin-left: 11px;
       }
 
       &:hover {
@@ -133,6 +159,10 @@ li {
     text-transform: uppercase;
   }
 
+  .logo__task-name {
+    font-size: 14px;
+  }
+
   .menu {
     width: 582px;
     margin-left: 46px;
@@ -172,6 +202,10 @@ li {
     color: $gold;
 
     text-decoration-line: underline;
+
+    &:hover {
+      color: white;
+    }
   }
 
   .call-rq {
@@ -223,6 +257,10 @@ li {
       color: $gold;
 
       transform: rotate(90deg);
+
+      &:hover {
+        color: white;
+      }
     }
 
     .instagram__line {
@@ -366,7 +404,6 @@ li {
     height: 100%;
     padding: 100px 55px 0 100px;
 
-
     .completed-short__head {
       margin-bottom: 21px;
 
@@ -445,8 +482,8 @@ li {
       display: flex;
       margin: 41px 0 0 3px;
 
-      &>* {
-        margin-right: 23px;
+      & > * {
+        margin-right: 11px;
       }
 
       .little-slider__left-arrow {
@@ -467,7 +504,7 @@ li {
         display: none;
       }
 
-      .little-slider__select:checked+div {
+      .little-slider__select:checked + div {
         background: #ffffff;
       }
 
@@ -660,6 +697,11 @@ li {
     p {
       margin: 0 0 13px 0;
     }
+
+    &::after {
+      content: url("../assets/img/camera.svg");
+      position: relative;
+    }
   }
 
   .online-control__video {
@@ -687,6 +729,10 @@ li {
       &:hover {
         display: none;
       }
+    }
+
+    iframe {
+      border: none;
     }
   }
 
@@ -892,13 +938,13 @@ li {
   .card-list-wrap {
     position: relative;
     bottom: 156px;
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
 
     width: 330px;
     height: 286px;
     margin: 0 auto;
 
     background-color: #ffffff;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
 
     p {
       margin: 25px 0 5px 34px;
@@ -930,9 +976,9 @@ li {
     width: 228px;
     height: 54px;
     margin: 0;
+    padding-top: 1px;
 
     font-size: 18px;
-    line-height: 54px;
     font-family: "Yeseva One", sans-serif;
     text-align: center;
     color: #ffffff;
@@ -978,7 +1024,7 @@ li {
         bottom: 33px;
         left: 75px;
 
-        >p {
+        > p {
           line-height: 35px;
         }
       }
@@ -987,7 +1033,7 @@ li {
         bottom: 16px;
         left: 100px;
 
-        >p {
+        > p {
           line-height: 35px;
         }
       }
@@ -1052,6 +1098,7 @@ li {
     padding: 0 49px;
 
     font-family: "FuturaBookC", sans-serif;
+    color: #ffffff;
 
     ::placeholder {
       color: #ffffff;
@@ -1079,6 +1126,7 @@ li {
         padding-left: 10px;
 
         font-family: "FuturaMediumC", sans-serif;
+        color: #ffffff;
 
         background-color: #131313;
       }
@@ -1101,6 +1149,7 @@ li {
         padding-left: 10px;
 
         font-family: "FuturaMediumC", sans-serif;
+        color: #ffffff;
 
         background-color: #131313;
       }
@@ -1128,6 +1177,7 @@ li {
         font-size: 18px;
         line-height: 25px;
         font-family: "FuturaMediumC", sans-serif;
+        color: #ffffff;
 
         background-color: #131313;
         border: 0;
@@ -1140,7 +1190,6 @@ li {
         color: rgba(255, 255, 255, 0.5);
       }
     }
-
 
     .oc-form__check {
       width: 100%;
@@ -1199,12 +1248,7 @@ li {
 
 //------------------------------------------------------------------------------------------------------------------//
 .fantasies {
-  .mini-slider {
-    display: none;
-  }
-
   position: relative;
-  z-index: -1;
 
   display: flex;
   justify-content: space-between;
@@ -1212,17 +1256,25 @@ li {
 
   background: url("../assets/img/fantasie-bg.jpg");
 
+  .mini-slider {
+    display: none;
+  }
+
   .fantasies__shadow {
     position: absolute;
-    z-index: -1;
 
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: linear-gradient(
+      120.96deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
   }
 
   .fantasies__list-wrap {
+    z-index: 1;
     width: 25%;
     height: 100%;
     margin-left: 99px;
@@ -1240,10 +1292,15 @@ li {
 
   .fantasies__list {
     .fantasies__list-item {
+      cursor: pointer;
       font-size: 20px;
       line-height: 50px;
       font-family: "Proxima Nova", sans-serif;
       color: #ffffff;
+
+      &:hover {
+        color: $gold;
+      }
     }
 
     span {
@@ -1254,6 +1311,7 @@ li {
   }
 
   .fantasies__gallery-wrap {
+    z-index: 1;
     position: relative;
     bottom: 40px;
 
@@ -1317,6 +1375,12 @@ li {
     color: #363636;
     white-space: pre-line;
   }
+
+  span::after {
+    content: url("../assets/img/pencil.svg");
+    position: relative;
+    top: 15px;
+  }
 }
 
 .design-project__body {
@@ -1329,7 +1393,7 @@ li {
 
   .card-list-wrap {
     height: auto;
-    padding-bottom: 61px;
+    padding-bottom: 54px;
 
     .types-of-repair__list-item {
       padding-bottom: 1px;
@@ -1337,7 +1401,7 @@ li {
   }
 
   .card-price-wrap {
-    bottom: 207px;
+    bottom: 184px;
     left: 31px;
   }
 }
@@ -1434,8 +1498,8 @@ li {
     display: flex;
     margin-top: 102px;
 
-    &>* {
-      margin-right: 23px;
+    & > * {
+      margin-right: 12px;
     }
 
     .little-slider__left-arrow {
@@ -1456,7 +1520,7 @@ li {
       display: none;
     }
 
-    .little-slider__select:checked+div {
+    .little-slider__select:checked + div {
       background: #ffffff;
     }
 
@@ -1503,6 +1567,8 @@ li {
     }
 
     .steps-after__steps-item {
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.376);
 
       &:nth-child(1),
       &:nth-child(4) {
@@ -1525,7 +1591,6 @@ li {
         font-size: 15px;
         line-height: 21px;
         font-family: "Yeseva One", sans-serif;
-        color: #ffffff60;
         text-transform: uppercase;
 
         border-bottom: 1px solid #e3b87360;
@@ -1535,7 +1600,6 @@ li {
         font-size: 15px;
         line-height: 18px;
         font-family: "FuturaBookC", sans-serif;
-        color: #ffffff60;
       }
 
       &--selected .steps-after__steps-head,
@@ -1545,6 +1609,10 @@ li {
 
       &--selected .steps-after__steps-head {
         border-bottom: 1px solid $gold;
+      }
+
+      &:hover {
+        color: white;
       }
     }
   }
@@ -1568,7 +1636,10 @@ li {
     margin-top: 36px;
 
     span {
-      margin-bottom: 11px;
+      margin-bottom: 30px;
+      position: relative;
+      left: 56px;
+      bottom: 10px;
 
       font-size: 20px;
       line-height: 28px;
@@ -1576,6 +1647,13 @@ li {
       text-align: center;
       color: #ffffff;
       text-transform: uppercase;
+
+      &::after {
+        content: url("../assets/img/group.svg");
+        position: relative;
+        top: 48px;
+        right: 107px;
+      }
     }
 
     p {
@@ -1711,7 +1789,10 @@ li {
     margin-top: 5px;
 
     span {
-      margin-bottom: 11px;
+      margin-bottom: 30px;
+      position: relative;
+      left: 56px;
+      bottom: 10px;
 
       font-size: 20px;
       line-height: 28px;
@@ -1719,6 +1800,13 @@ li {
       text-align: center;
       color: #181818;
       text-transform: uppercase;
+
+      &::after {
+        content: url("../assets/img/handshake.svg");
+        position: relative;
+        top: 48px;
+        right: 123px;
+      }
     }
 
     p {
@@ -1755,7 +1843,7 @@ li {
   flex-direction: column;
   justify-content: flex-end;
   width: 376px;
-  height: 455px;
+  height: 475px;
 
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.04);
 
@@ -1782,7 +1870,7 @@ li {
   }
 
   .clients__card-body {
-    padding: 0 26px 48px 20px;
+    padding: 0 26px 0 20px;
 
     p {
       margin-top: 9px;
@@ -1881,29 +1969,34 @@ li {
 
     display: flex;
 
-    div {
+    .svg-icon {
       width: 28px;
       height: 28px;
       margin-right: 17px;
-      padding: 6px 0 0 7px;
+      padding: 6px 0px;
 
       background-color: $gold;
       border-radius: 50%;
+
+      fill: #ffffff;
     }
   }
 
   .contacts__map-wrap {
     position: relative;
     bottom: 103px;
+
     width: 925px;
     height: 465px;
   }
 
-  .contacts__map-wrap iframe,
-  .contacts__map-wrap .mapouter,
-  .contacts__map-wrap .gmap_canvas {
+  .contacts__map-wrap iframe {
     width: 100%;
     height: 100%;
+  }
+
+  .gmap {
+    border: 0;
   }
 
   .oc-form {
@@ -2007,7 +2100,6 @@ li {
       }
     }
 
-
     .oc-form__check {
       width: 100%;
       margin: 0 0 0 312px;
@@ -2033,7 +2125,6 @@ li {
   }
 }
 
-
 //------------------------------------------------------------------------------------------------------------------//
 
 .footer {
@@ -2048,6 +2139,13 @@ li {
 @media only screen and (max-width: 1440px) {
   .global-wrapper {
     width: 100%;
+  }
+
+  .bad-boy-bg {
+    width: 0;
+    height: 0;
+
+    background: none;
   }
 }
 
@@ -2079,8 +2177,8 @@ li {
 
   .clients {
     .clients__body {
-      width: 100%;
       justify-content: space-around;
+      width: 100%;
 
       .clients__card-wrap:nth-child(3) {
         display: none;
@@ -2090,7 +2188,6 @@ li {
 }
 
 @media only screen and (max-width: 1280px) {
-
   .footer .call-rq,
   .header .call-rq {
     display: none;
@@ -2098,8 +2195,8 @@ li {
 
   .team {
     .team__body {
-      width: 100%;
       justify-content: space-around;
+      width: 100%;
     }
   }
 
@@ -2149,10 +2246,15 @@ li {
       margin: 0 auto;
     }
   }
-
 }
 
 @media only screen and (max-width: 1100px) {
+  .contacts {
+    .contacts__map-wrap {
+      width: 825px;
+      height: 365px;
+    }
+  }
 
   .footer,
   .header {
@@ -2194,6 +2296,11 @@ li {
       .online-control__play-btn {
         display: none;
       }
+
+      iframe {
+        width: 340px;
+        height: 207px;
+      }
     }
   }
 
@@ -2216,13 +2323,18 @@ li {
 }
 
 @media only screen and (max-width: 950px) {
+  .contacts .contacts__form-wrap {
+    position: relative;
+    bottom: 220px;
+    width: 100%;
+    min-height: 445px;
+    background-color: #131313;
+  }
+
   .contacts {
     .contacts__map-wrap {
-      display: none;
-    }
-
-    .contacts__form-wrap {
-      width: 100%;
+      width: 625px;
+      height: 365px;
     }
   }
 
@@ -2238,18 +2350,30 @@ li {
 
   .design-project {
     .design-project__head {
+      width: 100%;
       margin: 0 0 0 0;
       padding-top: 50px;
-      width: 100%;
 
       p {
         width: 100%;
+      }
+
+      span::after {
+        top: 40px;
+        right: 137px;
       }
     }
   }
 }
 
 @media only screen and (max-width: 800px) {
+  .contacts {
+    .contacts__map-wrap {
+      width: 525px;
+      height: 300px;
+    }
+  }
+
   .types-of-repair {
     .types-of-repair__body {
       justify-content: space-around;
@@ -2290,6 +2414,10 @@ li {
 }
 
 @media only screen and (max-width: 600px) {
+  .clients .clients__head span,
+  .team .team__head span {
+    position: initial;
+  }
 
   .footer,
   .header {
@@ -2317,6 +2445,11 @@ li {
         width: 100%;
       }
     }
+
+    .contacts__map-wrap {
+      width: 425px;
+      height: 300px;
+    }
   }
 
   .completed-projects {
@@ -2341,7 +2474,6 @@ li {
     }
   }
 
-
   .online-control {
     .online-control__form-wrap {
       display: none;
@@ -2361,6 +2493,11 @@ li {
         margin: 0 0 0 50px;
       }
     }
+
+    .contacts__map-wrap {
+      width: 375px;
+      height: 300px;
+    }
   }
 
   .team .team__head {
@@ -2368,9 +2505,11 @@ li {
   }
 
   .fantasies {
-    height: 0;
     position: relative;
     z-index: 1;
+
+    height: 0;
+
     background-color: transparent;
 
     .fantasies__list,
@@ -2380,10 +2519,12 @@ li {
 
     .fantasies__list-head {
       position: absolute;
-      margin: 0;
-      left: 0;
       bottom: 152px;
+      left: 0;
+
+      margin: 0;
       padding: 0 45px;
+
       font-size: 22px;
       line-height: 30px;
       text-align: center;
@@ -2391,16 +2532,15 @@ li {
 
     .mini-slider {
       position: absolute;
-      display: flex;
-      left: 19px;
       bottom: -121px;
+      left: 19px;
+
+      display: flex;
 
       .mini-slider__slides img {
         width: 340px;
       }
     }
-
-
   }
 
   .steps-before {
@@ -2454,15 +2594,17 @@ li {
         margin: 0;
 
         .short-about__head {
+          margin: 83px 40px 0 17px;
+
           font-size: 23px;
           line-height: 31px;
-          margin: 83px 40px 0 17px;
         }
 
         .short-about__body {
+          margin: 12px 40px 0 17px;
+
           font-size: 18px;
           line-height: 24px;
-          margin: 12px 40px 0 17px;
         }
 
         .short-about__btns {
@@ -2482,6 +2624,7 @@ li {
 
   .completed-projects {
     height: 727px;
+
     background-color: $black-bg;
 
     .little-slider .little-slider__controls {
@@ -2493,16 +2636,16 @@ li {
     }
 
     .completed-short {
-      padding: 0;
-      width: 100%;
       flex-basis: initial;
+      width: 100%;
+      padding: 0;
 
       .completed-short__head {
         margin-top: 34px;
-        text-align: center;
 
         font-size: 22px;
         line-height: 30px;
+        text-align: center;
 
         &::after {
           display: none;
@@ -2511,12 +2654,12 @@ li {
 
       .completed-short__body {
         margin: 25px 0 39px 0;
-        text-align: center;
-        padding-left: 30px;
         padding-right: 31px;
+        padding-left: 30px;
 
         font-size: 14px;
         line-height: 22px;
+        text-align: center;
       }
 
       .mini-slider {
@@ -2529,16 +2672,17 @@ li {
       margin-top: 37px;
 
       .little-slider__list {
-        margin: 0 0 0 0;
-        height: 100%;
         width: 100%;
+        height: 100%;
+        margin: 0 0 0 0;
 
         .little-slider__item {
-          margin: 0 0 0 18px;
           flex-basis: 38%;
+          margin: 0 0 0 18px;
 
           .little-slider__head {
             margin: 0;
+
             font-size: 14px;
             line-height: 12px;
           }
@@ -2555,20 +2699,22 @@ li {
         }
       }
     }
-
   }
 
   .online-control {
-    height: 826px;
     bottom: 0;
+
+    height: 826px;
+
     background-color: $black-bg;
 
     .online-control__head {
       width: 200px;
 
       p {
-        font-size: 22px;
         margin: 0 0 17px 0;
+
+        font-size: 22px;
       }
     }
 
@@ -2576,10 +2722,11 @@ li {
       width: 100%;
       height: 200px;
       padding: 23px 18px 0 20px;
+
       font-size: 14px;
       line-height: 24px;
-      white-space: initial;
       color: #ffffff;
+      white-space: initial;
 
       &::before {
         position: relative;
@@ -2589,9 +2736,9 @@ li {
 
     .online-control__form-wrap {
       display: block;
-      margin-top: 0px;
       width: 100%;
       height: 298px;
+      margin-top: 0;
 
       ::placeholder {
         color: #ffffff;
@@ -2601,52 +2748,61 @@ li {
         width: 90%;
         margin: 0;
         padding-left: 5px;
-        color: rgba(255, 255, 255, 0.5);
+
         font-size: 15px;
         line-height: 17px;
+        color: rgba(255, 255, 255, 0.5);
+
         border-bottom: 1px solid #ffffff60;
 
         input {
-          background-color: $black-bg;
-          color: #ffffff;
           font-size: 18px;
           line-height: 25px;
+          color: #ffffff;
+
+          background-color: $black-bg;
         }
       }
 
       .oc-form__phone {
         position: relative;
         top: 31px;
+
         width: 90%;
         margin: 0;
         padding-left: 5px;
-        color: rgba(255, 255, 255, 0.5);
+
         font-size: 15px;
         line-height: 17px;
+        color: rgba(255, 255, 255, 0.5);
+
         border-bottom: 1px solid #ffffff60;
 
         input {
-          background-color: $black-bg;
-          color: #ffffff;
           font-size: 18px;
           line-height: 25px;
+          color: #ffffff;
+
+          background-color: $black-bg;
         }
       }
 
       .oc-form__submit {
-        margin-right: 0;
-        margin-left: 0;
-        order: 2;
-        width: 91%;
         position: relative;
         top: 48px;
+
+        order: 2;
+        width: 91%;
+        margin-right: 0;
+        margin-left: 0;
       }
 
       .oc-form__check {
-        margin-left: 0;
         position: relative;
-        right: 15px;
         top: 22px;
+        right: 15px;
+
+        margin-left: 0;
 
         span {
           color: #ffffff;
@@ -2660,6 +2816,7 @@ li {
 
     .types-of-repair__head {
       margin-top: 82px;
+
       font-size: 22px;
 
       img {
@@ -2668,7 +2825,6 @@ li {
     }
 
     .types-of-repair__body {
-
       .card-three,
       .card-two {
         display: block;
@@ -2688,6 +2844,7 @@ li {
 
         .card-list-wrap {
           bottom: 171px;
+
           width: 270px;
           margin: 0;
 
@@ -2698,8 +2855,8 @@ li {
         }
 
         .types-of-repair__list {
-          margin: 0 0 0 31px;
           height: 193px;
+          margin: 0 0 0 31px;
 
           .types-of-repair__list-item {
             font-size: 13px;
@@ -2708,12 +2865,18 @@ li {
         }
 
         .card-price-wrap {
+          bottom: 236px;
           left: 0;
-          bottom: 251px;
+
           width: 190px;
           height: 40px;
+
           font-size: 15px;
           line-height: 41px;
+
+          p {
+            margin: 0;
+          }
         }
       }
 
@@ -2725,6 +2888,7 @@ li {
 
   .design-project {
     height: 1963px;
+
     background-color: $black-bg;
 
     .desk {
@@ -2732,27 +2896,34 @@ li {
     }
 
     .design-project__head {
-      padding-top: 153px;
       margin-bottom: 58px;
+      padding-top: 153px;
 
       span {
         margin-top: 18px;
+
         font-size: 22px;
         line-height: 30px;
         color: #ffffff;
+
+        &::after {
+          right: 32px;
+          top: 20px;
+          margin-left: 80px;
+        }
       }
 
       p {
         width: 290px;
         margin-top: 21px;
-        color: #ffffff;
+
         font-size: 15px;
         line-height: 20px;
+        color: #ffffff;
       }
     }
 
     .design-project__body {
-
       .card-three,
       .card-two {
         display: block;
@@ -2772,20 +2943,22 @@ li {
 
         .card-list-wrap {
           bottom: 161px;
+
           width: 270px;
           margin: 0;
 
           p {
+            margin-top: 21px;
+            margin-left: 32px;
+
             font-size: 15px;
             line-height: 21px;
-            margin-left: 32px;
-            margin-top: 21px;
           }
         }
 
         .types-of-repair__list {
-          margin: 0 0 0 31px;
           height: 131px;
+          margin: 0 0 0 31px;
 
           .types-of-repair__list-item {
             font-size: 13px;
@@ -2794,12 +2967,13 @@ li {
         }
 
         .card-price-wrap {
+          bottom: 184px;
           left: 0;
-          bottom: 196px;
+
           width: 190px;
           height: 40px;
+
           font-size: 15px;
-          line-height: 41px;
         }
       }
 
@@ -2819,7 +2993,7 @@ li {
         }
 
         .card-price-wrap {
-          bottom: 201px;
+          bottom: 191px;
         }
       }
     }
@@ -2829,31 +3003,34 @@ li {
     height: 1705px;
 
     .team__head {
-      margin-top: 0;
       width: 100%;
+      margin-top: 0;
 
       span {
         font-size: 22px;
         line-height: 30px;
+        position: initial;
+        margin-left: 110px;
       }
 
       p {
-        font-size: 15px;
-        line-height: 20px;
         margin-top: 19px;
         padding: 0 15px;
+
+        font-size: 15px;
+        line-height: 20px;
       }
     }
 
     .team__body {
+      justify-content: center;
+      width: 100%;
+      padding-left: 32px;
+
       .team__card-wrap:nth-child(2),
       .team__card-wrap:nth-child(3) {
         display: flex;
       }
-
-      width: 100%;
-      justify-content: center;
-      padding-left: 32px;
 
       .card-img-wrap {
         width: 304px;
@@ -2868,10 +3045,12 @@ li {
 
   .contacts {
     height: 1012px;
+
     background: $black-bg;
 
     .contacts__form-wrap {
       bottom: 0;
+
       width: 100%;
       min-height: 495px;
 
@@ -2883,8 +3062,8 @@ li {
         }
 
         label {
-          margin: 0 0 54px 0;
           width: 90%;
+          margin: 0 0 54px 0;
         }
 
         .oc-form__check {
@@ -2898,10 +3077,11 @@ li {
     }
 
     .contacts__address-wrap {
+      bottom: 0;
+
+      order: 2;
       width: 310px;
       margin-top: 38px;
-      bottom: 0;
-      order: 2;
 
       p {
         font-size: 18px;
@@ -2911,32 +3091,34 @@ li {
 
     .contacts__icons-wrap {
       bottom: -23px;
+
       order: 3;
 
       div {
-        margin-right: 22px;
         width: 39px;
         height: 39px;
+        margin-right: 22px;
       }
 
-      div:nth-child(1) img {
+      div:nth-child(1) svg {
         width: 20px;
         margin: 5px 0 0 2px;
       }
 
-      div:nth-child(2) img {
+      div:nth-child(2) svg {
         width: 17px;
         margin: 5px 0 0 4px;
       }
     }
 
     .contacts__map-wrap {
-      margin: 45px 0 0 0;
+      position: relative;
       bottom: 0;
+
       display: block;
       width: 340px;
       height: 255px;
-      position: relative;
+      margin: 45px 0 0 0;
     }
   }
 }
